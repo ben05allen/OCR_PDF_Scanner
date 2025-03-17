@@ -1,0 +1,21 @@
+[project]
+name = "ocr-pdf-scanner"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "ben allen", email = "ben05allen@hotmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pdf2image>=1.17.0",
+    "pillow>=11.1.0",
+    "pytesseract>=0.3.13",
+]
+
+[project.scripts]
+scanner = "ocr_pdf_scanner:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
