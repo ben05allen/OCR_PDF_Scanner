@@ -2,19 +2,15 @@
 
 Using the magic of tesseract to extract text from PDFs which weren't machine written
 
+## Requirements (Ubuntu 2x.04)
+
+`pdf2image` needs `uv`, `poppler-utils`  and `Tesseract-ocr` installed;
+
+  - `curl -LsSf https://astral.sh/uv/install.sh | sh`
+  - `sudo apt install poppler-utils tesseract-ocr`
+
+
 ## Usage
-
-`Usage: python3 app.py <folder with pdf docs>`
-
-## Requirements (Ubuntu 22.04)
-
-- `pdf2image` needs `poppler-utils` installed;
-
-  - `sudo apt install poppler-utils`
-
-- Install Tesseract-ocr
-
-  - `sudo apt install tesseract-ocr`
-
-- And install the external python libraries required
-  - `pip install -r requirements.txt`
+```[bash]
+uv run scanner <folder with pdf docs>
+```
